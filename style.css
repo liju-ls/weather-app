@@ -1,0 +1,43 @@
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(50, 71, 71);
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 30vw;
+  height: 30vh;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.341);
+}
+
+#info input {
+  height: 1.5rem;
+  width: 20rem;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  outline-style: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+#info button {
+    margin: 10px;
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(219, 255, 166);
+}
