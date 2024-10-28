@@ -1,5 +1,6 @@
 html {
   height: 100vh;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 
 #info input {
   height: 1.5rem;
-  width: 20rem;
+  width: 15vw;
   padding: 10px;
   border: none;
   border-radius: 2px;
@@ -40,4 +41,10 @@ body {
     border: none;
     border-radius: 1rem;
     background-color: rgb(219, 255, 166);
+}
+
+#info p {
+    font-size: 2vw;
+    margin: 0;
+    color:rgb(216, 67, 224);
 }
