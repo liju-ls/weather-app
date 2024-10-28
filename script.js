@@ -19,13 +19,15 @@ async function getWeather(city) {
     );
     if (!response.ok) {
       response.json().then((data) => {
+        clear();
         showError(data);
       });
+    } else {
+      response.json().then((data) => {
+        clear();
+        showWeather(data);
+      });
     }
-
-    response.json().then((data) => {
-      showWeather(data);
-    });
   } catch (error) {
     console.log(error);
   }
@@ -38,4 +40,9 @@ function showWeather(data) {
 
 function showError(data) {
   weatherText.textContent = data.error.message;
+}
+
+function clear() {
+  weatherText.textContent = "";
+  weatherIcon.src = "";
 }
