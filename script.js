@@ -2,6 +2,9 @@ let btn = document.getElementById("btn");
 let cityName = document.getElementById("cityName");
 let weatherText = document.getElementById("weatherText");
 let weatherIcon = document.getElementById("weatherIcon");
+let dateOfToday = document.getElementById("dateOfToday");
+let temperature = document.getElementById("temperature");
+let windAndHumidity = document.getElementById("windAndHumidity");
 
 let city = "";
 
@@ -34,8 +37,15 @@ async function getWeather(city) {
 }
 
 function showWeather(data) {
+  let t = data.location.localtime.split("-")[2];
+  let wAndH = data.current.wind_kph + " KPH / " + data.current.humidity + "%";
+  let temp = data.current.temp_c.toString().split(".")[0];
+  console.log();
   weatherText.textContent = data.current.condition.text;
   weatherIcon.src = data.current.condition.icon;
+  dateOfToday.textContent = t;
+  temperature.textContent = temp;
+  windAndHumidity.textContent = wAndH;
 }
 
 function showError(data) {

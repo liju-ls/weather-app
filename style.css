@@ -1,14 +1,22 @@
 html {
   height: 100vh;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+p {
+  margin: 0;
 }
 
 body {
+  margin: 0;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(50, 71, 71);
+  background-image: url(images/rain.jpg);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(50px);
 }
 
 #info {
@@ -33,18 +41,104 @@ body {
   font-size: 1rem;
 }
 
-
 #info button {
-    margin: 10px;
-    width: 4rem;
-    height: 2rem;
-    border: none;
-    border-radius: 1rem;
-    background-color: rgb(219, 255, 166);
+  margin: 10px;
+  width: 4rem;
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(219, 255, 166);
 }
 
 #info p {
-    font-size: 2vw;
-    margin: 0;
-    color:rgb(216, 67, 224);
+  font-size: 2vw;
+  margin: 0;
+  color: rgb(216, 67, 224);
+}
+
+.box {
+  width: 60vw;
+  height: 80vh;
+  border-radius: 5rem;
+}
+
+.top {
+  height: 70%;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  background-image: url(images/rain.jpg);
+}
+
+#cityName {
+  color: white;
+  font-size: 40px;
+  width: 30%;
+  height: 10%;
+  margin: 20px 50px;
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+#cityName:focus {
+  outline: none;
+}
+
+.bottom {
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(50px);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.sectionContainer {
+  display: flex;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.section1 {
+  width: 40%;
+  height: 100%;
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+.mainInfo {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 70% 30%;
+}
+
+.tempContainer {
+  margin: 0;
+  padding: 0;
+  font-size: 10vh;
+  line-height: 100%;
+  text-align: center;
+}
+
+#weatherIcon {
+  justify-self: center;
+  width: auto;
+  height: 100%;
+}
+
+#dateOfToday {
+  text-align: center;
+}
+
+#windAndHumidity {
+  text-align: center;
 }
