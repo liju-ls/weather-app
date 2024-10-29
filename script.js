@@ -6,14 +6,21 @@ let dateOfToday = document.getElementById("dateOfToday");
 let temperature = document.getElementById("temperature");
 let windAndHumidity = document.getElementById("windAndHumidity");
 
-let city = "";
+let city = "chennai";
 
 btn.addEventListener("click", () => {
   if (cityName.value.length > 1) {
+    btn.style.visibility = "hidden";
     city = cityName.value;
     getWeather(city);
   }
 });
+
+cityName.addEventListener("input", (e) => {
+  btn.style.visibility = "visible";
+});
+
+getWeather(city);
 
 async function getWeather(city) {
   try {
