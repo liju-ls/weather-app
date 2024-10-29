@@ -44,9 +44,9 @@ async function getWeather(city) {
 }
 
 function showWeather(data) {
-  let t = data.location.localtime.split("-")[2];
+  let t = data.location.localtime.split("-")[2].split(" ")[0] + "th";
   let wAndH = data.current.wind_kph + " KPH / " + data.current.humidity + "%";
-  let temp = data.current.temp_c.toString().split(".")[0];
+  let temp = data.current.temp_c.toString().split(".")[0] + "°C";
   console.log();
   weatherText.textContent = data.current.condition.text;
   weatherIcon.src = data.current.condition.icon;
